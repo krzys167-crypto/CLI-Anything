@@ -1752,3 +1752,23 @@ Apache License 2.0 — free to use, modify, and distribute.
   <em> Thanks for visiting ✨ CLI-Anything!</em><br><br>
   <img src="https://visitor-badge.laobi.icu/badge?page_id=HKUDS.CLI-Anything&style=for-the-badge&color=00d4ff" alt="Views">
 </p>
+git clone --depth 1 https://github.com/HKUDS/CLI-Anything.git /tmp/CLI-Anything
+cd /tmp/CLI-Anything
+
+echo "=== COMMIT ==="
+git rev-parse HEAD
+
+echo "=== CODEX ==="
+find codex-skill -maxdepth 3 -type f | sort
+
+echo "=== WORKFLOWS ==="
+find .github/workflows -maxdepth 2 -type f -print 2>/dev/null | sort
+
+echo "=== SKILLS ==="
+find skills -maxdepth 2 -type f -name 'SKILL.md' | head -50
+
+echo "=== PLUGIN ==="
+find cli-anything-plugin -maxdepth 2 -type f | sort
+
+echo "=== INSTALL TEST ==="
+bash codex-skill/tests/test_install.sh
