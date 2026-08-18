@@ -42,7 +42,7 @@ jobs:
       
       - name: Upload Scanner Log
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ola-scanner-log
           path: automation/evidence-v0.1/scan.log
@@ -188,14 +188,14 @@ jobs:
       # ============================================================
       - name: Upload Evidence Records
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ola-evidence-records
           path: automation/evidence-v0.1/scan_results.json
       
       - name: Upload All OLA Artifacts
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ola-evidence-complete
           path: automation/evidence-v0.1/
@@ -249,7 +249,7 @@ jobs:
       
       - name: Upload Report
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ola-evidence-report
           path: automation/evidence-v0.1/OLA_EVIDENCE_REPORT.md
